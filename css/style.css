@@ -435,18 +435,18 @@
     padding-left: 60px;
 }
 
-.site-mobile-menu .site-nav-wrap[data-class="social"] {
+.site-mobile-menu .site-nav-wrap[loading="lazy"class="social"] {
     float: left;
     width: 100%;
     margin-top: 30px;
     padding-bottom: 5em;
 }
 
-.site-mobile-menu .site-nav-wrap[data-class="social"] > li {
+.site-mobile-menu .site-nav-wrap[loading="lazy"class="social"] > li {
     width: auto;
 }
 
-.site-mobile-menu .site-nav-wrap[data-class="social"] > li:first-child a {
+.site-mobile-menu .site-nav-wrap[loading="lazy"class="social"] > li:first-child a {
     padding-left: 15px !important;
 }
 
@@ -584,7 +584,7 @@ p {
     margin-bottom: 1rem;
 }
 
-abbr[data-original-title], abbr[title] {
+abbr[loading="lazy"original-title], abbr[title] {
     text-decoration: underline;
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
@@ -4531,8 +4531,8 @@ input[type="button"].btn-block, input[type="reset"].btn-block, input[type="submi
     content: "Browse";
 }
 
-.custom-file-input ~ .custom-file-label[data-browse]::after {
-    content: attr(data-browse);
+.custom-file-input ~ .custom-file-label[loading="lazy"browse]::after {
+    content: attr(loading="lazy"browse);
 }
 
 .custom-file-label {
@@ -11641,7 +11641,7 @@ p {
     margin-bottom: 1rem;
 }
 
-abbr[data-original-title], abbr[title] {
+abbr[loading="lazy"original-title], abbr[title] {
     text-decoration: underline;
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;

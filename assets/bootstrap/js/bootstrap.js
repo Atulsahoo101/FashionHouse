@@ -88,14 +88,14 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   // ALERT CLASS DEFINITION
   // ======================
 
-  var dismiss = '[data-dismiss="alert"]'
+  var dismiss = '[loading="lazy"dismiss="alert"]'
   var Alert   = function (el) {
     $(el).on('click', dismiss, this.close)
   }
 
   Alert.prototype.close = function (e) {
     var $this    = $(this)
-    var selector = $this.attr('data-target')
+    var selector = $this.attr('loading="lazy"target')
 
     if (!selector) {
       selector = $this.attr('href')
@@ -155,10 +155,10 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // ALERT DATA-API
+  // ALERT loading="lazy"API
   // ==============
 
-  $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
+  $(document).on('click.bs.alert.loading="lazy"api', dismiss, Alert.prototype.close)
 
 }(jQuery);
 
@@ -217,7 +217,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
   Button.prototype.toggle = function () {
-    var $parent = this.$element.closest('[data-toggle="buttons"]')
+    var $parent = this.$element.closest('[loading="lazy"toggle="buttons"]')
     var changed = true
 
     if ($parent.length) {
@@ -266,10 +266,10 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // BUTTON DATA-API
+  // BUTTON loading="lazy"API
   // ===============
 
-  $(document).on('click.bs.button.data-api', '[data-toggle^=button]', function (e) {
+  $(document).on('click.bs.button.loading="lazy"api', '[loading="lazy"toggle^=button]', function (e) {
     var $btn = $(e.target)
     if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
     $btn.button('toggle')
@@ -468,19 +468,19 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // CAROUSEL DATA-API
+  // CAROUSEL loading="lazy"API
   // =================
 
-  $(document).on('click.bs.carousel.data-api', '[data-slide], [data-slide-to]', function (e) {
+  $(document).on('click.bs.carousel.loading="lazy"api', '[loading="lazy"slide], [loading="lazy"slide-to]', function (e) {
     var $this   = $(this), href
-    var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
+    var $target = $($this.attr('loading="lazy"target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
     var options = $.extend({}, $target.data(), $this.data())
-    var slideIndex = $this.attr('data-slide-to')
+    var slideIndex = $this.attr('loading="lazy"slide-to')
     if (slideIndex) options.interval = false
 
     $target.carousel(options)
 
-    if (slideIndex = $this.attr('data-slide-to')) {
+    if (slideIndex = $this.attr('loading="lazy"slide-to')) {
       $target.data('bs.carousel').to(slideIndex)
     }
 
@@ -488,7 +488,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   })
 
   $(window).on('load', function () {
-    $('[data-ride="carousel"]').each(function () {
+    $('[loading="lazy"ride="carousel"]').each(function () {
       var $carousel = $(this)
       $carousel.carousel($carousel.data())
     })
@@ -652,22 +652,22 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // COLLAPSE DATA-API
+  // COLLAPSE loading="lazy"API
   // =================
 
-  $(document).on('click.bs.collapse.data-api', '[data-toggle=collapse]', function (e) {
+  $(document).on('click.bs.collapse.loading="lazy"api', '[loading="lazy"toggle=collapse]', function (e) {
     var $this   = $(this), href
-    var target  = $this.attr('data-target')
+    var target  = $this.attr('loading="lazy"target')
         || e.preventDefault()
         || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') //strip for ie7
     var $target = $(target)
     var data    = $target.data('bs.collapse')
     var option  = data ? 'toggle' : $this.data()
-    var parent  = $this.attr('data-parent')
+    var parent  = $this.attr('loading="lazy"parent')
     var $parent = parent && $(parent)
 
     if (!data || !data.transitioning) {
-      if ($parent) $parent.find('[data-toggle=collapse][data-parent="' + parent + '"]').not($this).addClass('collapsed')
+      if ($parent) $parent.find('[loading="lazy"toggle=collapse][loading="lazy"parent="' + parent + '"]').not($this).addClass('collapsed')
       $this[$target.hasClass('in') ? 'addClass' : 'removeClass']('collapsed')
     }
 
@@ -702,7 +702,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   // =========================
 
   var backdrop = '.dropdown-backdrop'
-  var toggle   = '[data-toggle=dropdown]'
+  var toggle   = '[loading="lazy"toggle=dropdown]'
   var Dropdown = function (element) {
     $(element).on('click.bs.dropdown', this.toggle)
   }
@@ -780,7 +780,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
   function getParent($this) {
-    var selector = $this.attr('data-target')
+    var selector = $this.attr('loading="lazy"target')
 
     if (!selector) {
       selector = $this.attr('href')
@@ -824,10 +824,10 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   // ===================================
 
   $(document)
-    .on('click.bs.dropdown.data-api', clearMenus)
-    .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
-    .on('click.bs.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
-    .on('keydown.bs.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
+    .on('click.bs.dropdown.loading="lazy"api', clearMenus)
+    .on('click.bs.dropdown.loading="lazy"api', '.dropdown form', function (e) { e.stopPropagation() })
+    .on('click.bs.dropdown.loading="lazy"api'  , toggle, Dropdown.prototype.toggle)
+    .on('keydown.bs.dropdown.loading="lazy"api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
 }(jQuery);
 
@@ -887,7 +887,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
     this.escape()
 
-    this.$element.on('click.dismiss.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
+    this.$element.on('click.dismiss.modal', '[loading="lazy"dismiss="modal"]', $.proxy(this.hide, this))
 
     this.backdrop(function () {
       var transition = $.support.transition && that.$element.hasClass('fade')
@@ -1054,13 +1054,13 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // MODAL DATA-API
+  // MODAL loading="lazy"API
   // ==============
 
-  $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
+  $(document).on('click.bs.modal.loading="lazy"api', '[loading="lazy"toggle="modal"]', function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
-    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) //strip for ie7
+    var $target = $($this.attr('loading="lazy"target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) //strip for ie7
     var option  = $target.data('modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
     e.preventDefault()
@@ -1363,8 +1363,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
   Tooltip.prototype.fixTitle = function () {
     var $e = this.$element
-    if ($e.attr('title') || typeof($e.attr('data-original-title')) != 'string') {
-      $e.attr('data-original-title', $e.attr('title') || '').attr('title', '')
+    if ($e.attr('title') || typeof($e.attr('loading="lazy"original-title')) != 'string') {
+      $e.attr('loading="lazy"original-title', $e.attr('title') || '').attr('title', '')
     }
   }
 
@@ -1392,7 +1392,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
     var $e = this.$element
     var o  = this.options
 
-    title = $e.attr('data-original-title')
+    title = $e.attr('loading="lazy"original-title')
       || (typeof o.title == 'function' ? o.title.call($e[0]) :  o.title)
 
     return title
@@ -1538,7 +1538,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
     var $e = this.$element
     var o  = this.options
 
-    return $e.attr('data-content')
+    return $e.attr('loading="lazy"content')
       || (typeof o.content == 'function' ?
             o.content.call($e[0]) :
             o.content)
@@ -1614,7 +1614,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
     this.$element       = $(element).is('body') ? $(window) : $(element)
     this.$body          = $('body')
-    this.$scrollElement = this.$element.on('scroll.bs.scroll-spy.data-api', process)
+    this.$scrollElement = this.$element.on('scroll.bs.scroll-spy.loading="lazy"api', process)
     this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
     this.selector       = (this.options.target
       || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
@@ -1685,7 +1685,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
       .removeClass('active')
 
     var selector = this.selector
-      + '[data-target="' + target + '"],'
+      + '[loading="lazy"target="' + target + '"],'
       + this.selector + '[href="' + target + '"]'
 
     var active = $(selector)
@@ -1730,11 +1730,11 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // SCROLLSPY DATA-API
+  // SCROLLSPY loading="lazy"API
   // ==================
 
   $(window).on('load', function () {
-    $('[data-spy="scroll"]').each(function () {
+    $('[loading="lazy"spy="scroll"]').each(function () {
       var $spy = $(this)
       $spy.scrollspy($spy.data())
     })
@@ -1868,10 +1868,10 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // TAB DATA-API
+  // TAB loading="lazy"API
   // ============
 
-  $(document).on('click.bs.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
+  $(document).on('click.bs.tab.loading="lazy"api', '[loading="lazy"toggle="tab"], [loading="lazy"toggle="pill"]', function (e) {
     e.preventDefault()
     $(this).tab('show')
   })
@@ -1906,8 +1906,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   var Affix = function (element, options) {
     this.options = $.extend({}, Affix.DEFAULTS, options)
     this.$window = $(window)
-      .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
-      .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
+      .on('scroll.bs.affix.loading="lazy"api', $.proxy(this.checkPosition, this))
+      .on('click.bs.affix.loading="lazy"api',  $.proxy(this.checkPositionWithEventLoop, this))
 
     this.$element = $(element)
     this.affixed  =
@@ -1986,11 +1986,11 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // AFFIX DATA-API
+  // AFFIX loading="lazy"API
   // ==============
 
   $(window).on('load', function () {
-    $('[data-spy="affix"]').each(function () {
+    $('[loading="lazy"spy="affix"]').each(function () {
       var $spy = $(this)
       var data = $spy.data()
 
