@@ -53,7 +53,7 @@ p {
   margin-bottom: 1rem; }
 
 abbr[title],
-abbr[loading="lazy"original-title] {
+abbr[data-original-title] {
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
