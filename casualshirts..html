@@ -2745,43 +2745,6 @@
 		}
 	</script>
 
-	<script>
-		$(document).ready(function () {
-			$('.dropdown-submenu a.test').on("click", function (e) {
-				$(this).next('ul').toggle();
-				e.stopPropagation();
-				e.preventDefault();
-			});
-		});
-	</script>
-
-
-	<script>
-		const imgs = document.querySelectorAll('[data-src]');
-		imgs.forEach(img => {
-			observer.observe(img);
-		});
-	</script>
-	<script>
-		const images = document.querySelectorAll("img");
-
-		const imgOptions = {};
-		const imgObserver = new IntersectionObserver((entries, imgObserver) => {
-			entries.forEach((entry) => {
-				if (!entry.isIntersecting) return;
-
-				const img = entry.target;
-				img.src = img.src.replace("w=10&", "w=800&");
-				imgObserver.unobserve(entry.target);
-			});
-		}, imgOptions);
-
-		images.forEach((img) => {
-			imgObserver.observe(img);
-		});
-
-	</script>
-
 
 
 
