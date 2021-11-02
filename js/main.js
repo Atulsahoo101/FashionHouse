@@ -1,7 +1,3 @@
-
-
-
-
 $(function() {
 
 	var siteSticky = function() {
