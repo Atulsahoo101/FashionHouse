@@ -44,6 +44,7 @@
   <style type="text/css">
       body {background-image: url(images/amanda-vick-zw_oaDbfzyE-unsplash.jpg);
 			background-size: cover;
+			background-repeat: no-repeat;
 		    background-attachment:fixed;}
   </style>
 </head>
@@ -143,7 +144,7 @@
 	</div>
 <br>
 
-	<div class="container ">
+	<div class="container">
 		<div class="flex justify-content-center  mar " >
 		  <div class="searchbar1" id="search1">
 			<input id="searchinput1" type="text" onkeyup="myFunction()"  placeholder="Product ID Search" class="fas fa-search">
@@ -494,45 +495,162 @@
 
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/jquery-latest.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jquery-latest.min.js"></script>
+<script>
+	$(".item9").slice(0, 0).show(); //showing 3 div
 
-  <script>
-	function myFunction(){
-	let tabel, filter, input, tr, td, i;
-	input = document.getElementById("searchinput1");
-	filter = input.value.toUpperCase();
-	tabel = document.getElementById("myTable");
-	tr = document.getElementsByTagName("tr");
-	
-	for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
-            } 
-        }
-}
-	</script>
+	$(".loadMore").on("click", function () {
+		$(".item9:hidden").slice(0, 4).show(); //showing 3 hidden div on click
 
+		if ($(".item9:hidden").length == 0) {
+			$(".loadMore").fadeOut(); //this will hide
+			//button when length is 0
+		}
+	})
+
+</script>
+<script>
+	$(".item8").slice(0, 0).show(); //showing 3 div
+
+	$(".loadMore2").on("click", function () {
+		$(".item8:hidden").slice(0, 4).show(); //showing 3 hidden div on click
+
+		if ($(".item8:hidden").length == 0) {
+			$(".loadMore2").fadeOut(); //this will hide
+			//button when length is 0
+		}
+	})
+
+</script>
+<script>
+	function myFunction() {
+		var input, filter, id, txtValue;
+		input = document.getElementById("search_input");
+		filter = input.value.toUpperCase();
+
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByTagName("a")[0];
+			txtValue = a.textContent || a.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				li[i].style.display = "";
+			} else {
+				li[i].style.display = "none";
+			}
+		}
+	}
+</script>
+
+
+<script>
+	var sliderObjects = [];
+	createSliderObjects();
+
+	function plusDivs(obj, n) {
+		var parentDiv = $(obj).parent();
+		var matchedDiv;
+		$.each(sliderObjects, function (i, item) {
+			if ($(parentDiv[0]).attr('id') == $(item).attr('id')) {
+				matchedDiv = item;
+				return false;
+			}
+		});
+		matchedDiv.slideIndex = matchedDiv.slideIndex + n;
+		showDivs(matchedDiv, matchedDiv.slideIndex);
+	}
+
+	function createSliderObjects() {
+		var sliderDivs = $('.slider');
+		$.each(sliderDivs, function (i, item) {
+			var obj = {};
+			obj.id = $(item).attr('id');
+			obj.divContent = item;
+			obj.slideIndex = 1;
+			obj.slideContents = $(item).find('.mySlides');
+			showDivs(obj, 1);
+			sliderObjects.push(obj);
+		});
+	}
+
+	function showDivs(divObject, n) {
+
+		var i;
+		if (n > divObject.slideContents.length) {
+			divObject.slideIndex = 1
+		}
+		if (n < 1) {
+			divObject.slideIndex = divObject.slideContents.length
+		}
+		for (i = 0; i < divObject.slideContents.length; i++) {
+			divObject.slideContents[i].style.display = "none";
+		}
+		divObject.slideContents[divObject.slideIndex - 1].style.display = "block";
+	}
+</script>
+
+
+
+<script>
+	var sliderObjects = [];
+	createSliderObjects();
+
+	function plusDivss(obj, n) {
+		var parentDivs = $(obj).parent();
+		var matchedDivs;
+		$.each(sliderObjects, function (i, item) {
+			if ($(parentDivs[0]).attr('id') == $(item).attr('id')) {
+				matchedDivs = item;
+				return false;
+			}
+		});
+		matchedDivs.slideIndex = matchedDivs.slideIndex + n;
+		showDivs(matchedDivs, matchedDivs.slideIndex);
+	}
+
+	function createSliderObjects() {
+		var sliderDivss = $('.slider');
+		$.each(sliderDivss, function (i, item) {
+			var obj = {};
+			obj.id = $(item).attr('id');
+			obj.divsContent = item;
+			obj.slideIndex = 1;
+			obj.slideContents = $(item).find('.mySlides');
+			showDivss(obj, 1);
+			sliderObjects.push(obj);
+		});
+	}
+
+	function showDivss(divsObject, n) {
+
+		var i;
+		if (n > divsObject.slideContents.length) {
+			divsObject.slideIndex = 1
+		}
+		if (n < 1) {
+			divsObject.slideIndex = divsObject.slideContents.length
+		}
+		for (i = 0; i < divsObject.slideContents.length; i++) {
+			divsObject.slideContents[i].style.display = "none";
+		}
+		divsObject.slideContents[divsObject.slideIndex - 1].style.display = "block";
+	}
+</script>
 
     
   </body>
