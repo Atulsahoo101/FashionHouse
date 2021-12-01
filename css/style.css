@@ -30,7 +30,7 @@ and (min-device-width : 1224px)
 @media screen and (max-width: 600px) {
     #searchinput1{
         padding: 0 10px;
-        width: 350px;
+        width: 300px;
         caret-color:black;
        
         }
@@ -93,19 +93,7 @@ and (min-device-width : 1224px)
     }
 }
 
-.keyframes-active {
-    0% {
-        transform: scale(1,1);
-    }
 
-    90% {
-        transform: scale(.9,.88);
-    }
-
-    100% {
-        transform: scale(.92,.9);
-    }
-}
 
 /* Hover state animation keyframes below */
 .site-navbar {
@@ -24296,7 +24284,7 @@ textarea.form-control {
 ider-text .v, .hero-wrap .slider-text .vr {
     display: none;
 }
-}
+
 
 .hero-wrap .slider-text h1 {
     font-family: "Roboto Condensed", Arial, sans-serif;
