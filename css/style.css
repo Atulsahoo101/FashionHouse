@@ -30,7 +30,16 @@ and (min-device-width : 1224px)
 @media screen and (max-width: 600px) {
     #searchinput1{
         padding: 0 10px;
-        width: 280px;
+        width: 300px;
+        caret-color:black;
+       
+        }
+}
+@media only screen 
+and (max-width : 320px) {
+    #searchinput1{
+        padding: 0 10px;
+        width: 250px;
         caret-color:black;
        
         }
