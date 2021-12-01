@@ -79,12 +79,7 @@ thead
   transition: width 0.4s linear;
   }
 
- #searchinput1{
-  padding: 0 10px;
-  width: 250px;
-  caret-color:black;
  
-  }
 
   .search_icon1{
   background: black;

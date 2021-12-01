@@ -16,6 +16,25 @@ and (min-device-width : 1224px)
         margin-top: 100px;
     }
 }
+@media only screen   
+and (min-device-width : 1224px)   
+  {
+#searchinput1{
+    padding: 0 10px;
+    width: 1080px;
+    caret-color:black;
+   
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #searchinput1{
+        padding: 0 10px;
+        width: 350px;
+        caret-color:black;
+       
+        }
+}
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
