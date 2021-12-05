@@ -44,6 +44,25 @@ and (max-width : 320px) {
        
         }
 }
+
+@media screen and (max-width: 600px) {
+    #searching {
+        margin-top: 1px;
+    }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
+  {
+    #adverting {
+        margin-top: 1px;
+    }
+}
+@media only screen   
+and (min-device-width : 1224px)   
+  {
+    #advert1 {
+        margin-top: 11px;
+    }
+}
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
