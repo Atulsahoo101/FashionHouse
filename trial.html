@@ -1,89 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<<<<<<< HEAD
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Web Share</title>
-  <style>
-    body {
-      margin: 0;
-      background: lightblue;
-      font-family: system-ui;
-      color: rebeccapurple;
-      padding: 20px;
-    }
-    img {
-      width: 100%;
-    }
-    main {
-      max-width: 320px;
-      margin: 20px auto;
-      border: 5px dashed lightseagreen;
-      height: calc(100vh - 80px);
-      border-radius: 10px;
-      background: white;
-      padding: 20px;
-      box-shadow: 0 0 5px lightslategray;
-    }
-    button {
-      background: lightcoral;
-      padding: 10px 20px 12px;
-      color: white;
-      border-radius: 30px;
-      width: 100%;
-      border: none;
-      font-size: 20px;
-      text-transform: uppercase;
-      -webkit-appearance: none;
-      font-weight: bold;
-      outline: 0;
-      cursor: pointer;
-      box-shadow: inset 0px -2px 0 2px black;
-    }
-    button:active {
-      transform: scale(.9);
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <section>
-      <img src="thumb.jpg" alt="">
-    </section>
-    <h4><em>Hoy es un buen día para compartir conocimiento...</em></h4>
-    <button id="button">Compartir</button>
-  </main>
-  <script>
-    const $button = document.querySelector('#button')
-    if ('share' in navigator) {
-      $button.addEventListener('click', share)
-      function share() {
-        navigator.share({
-          title: 'Probando Share API',
-          text: 'Suscríbete a Youtube.com/LeonidasEsteban',
-          url: './thumb.jpg',
-        })
-        .then(()=>{
-          alert('hemos logrado compartir')
-        })
-        .catch(()=>{
-          alert('no se pudo compartir, prueba usando https en un navegador móvil')
-        })
-      }
-    } 
-  </script>
-=======
 
-	<title>Fashion House || Search</title>
-
-
-
+	<title>Fashion House</title>
 	<link rel="icon" href='images\circle-cropped (1).png' type="image/x-icon">
-	<link rel="icon" href='images\circle-cropped (1).png' type="image/x-icon">
-	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
@@ -94,6 +19,10 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="icomoon\style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
 
 	<link rel="stylesheet" href="css/aos.css">
 
@@ -106,769 +35,1681 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
 		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-	<style type="text/css">
-		body {
-			background-image: url(images/amanda-vick-zw_oaDbfzyE-unsplash.jpg);
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
+	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://www.w3schools.com/lib/w3.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+	<style>
+		/*.gallery*/
+
+
+		.gallery .gallery-filter {
+			padding: 0 15px;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 20px;
 		}
-    *{box-sizing: border-box; -webkit-box-sizing: border-box; }
-html, body { height: 100%; }
-body { margin: 0; font: 16px/1.3 sans-serif; }
 
-/*
-PURE RESPONSIVE CSS3 SLIDESHOW GALLERY by Roko C. buljan
-http://stackoverflow.com/a/34696029/383904
-*/
+		.gallery .gallery-filter .filter-item {
+			color: #ffffff;
+			font-size: 18px;
+			text-transform: uppercase;
+			display: inline-block;
+			margin: 0 10px;
+			cursor: pointer;
+			border-bottom: 2px solid transparent;
+			line-height: 1.2;
+			transition: all 0.3s ease;
+			background-color: rgb(243, 84, 84);
+			border-radius: 9px;
+			padding: 10px;
+		}
 
- {
-	position: relative;
-	overflow: hidden;
-	height: 100%; /* Or set a fixed height */
-}
+		.gallery .gallery-filter .filter-item.active {
+			color: #f1f1ef;
 
-/* SLIDER */
+		}
 
- .slider {
-	height: 100%;
-	white-space: nowrap;
-	font-size: 0;
-	transition: 0.8s;
-}
-
-/* SLIDES */
-
- .slider > * {
-	font-size: 1rem;
-	display: inline-block;
-	white-space: normal;
-	vertical-align: top;
-	height: 100%;
-	width: 100%;
-	background: none 50% no-repeat;
-	background-size: cover;
-}
-
-/* PREV/NEXT, CONTAINERS & ANCHORS */
-
- .prevNext {
-	position: absolute;
-	z-index: 1;
-	top: 50%;
-	width: 100%;
-	height: 0;
-}
-
- .prevNext > div+div {
-	visibility: hidden; /* Hide all but first P/N container */
-}
-
- .prevNext a {
-	background: #fff;
-	position: absolute;
-	width:       60px;
-	height:      60px;
-	line-height: 60px; /* If you want to place numbers */
-	text-align: center;
-	opacity: 0.7;
-	-webkit-transition: 0.3s;
-					transition: 0.3s;
-	-webkit-transform: translateY(-50%);
-					transform: translateY(-50%);
-	left: 0;
-}
- .prevNext a:hover {
-	opacity: 1;
-}
- .prevNext a+a {
-	left: auto;
-	right: 0;
-}
-
-/* NAVIGATION */
-
- .bullets {
-	position: absolute;
-	z-index: 2;
-	bottom: 0;
-	padding: 10px 0;
-	width: 100%;
-	text-align: center;
-}
- .bullets > a {
-	display: inline-block;
-	width:       30px;
-	height:      30px;
-	line-height: 30px;
-	text-decoration: none;
-	text-align: center;
-	background: rgba(255, 255, 255, 1);
-	-webkit-transition: 0.3s;
-					transition: 0.3s;
-}
- .bullets > a+a {
-	background: rgba(255, 255, 255, 0.5); /* Dim all but first */
-}
- .bullets > a:hover {
-	background: rgba(255, 255, 255, 0.7) !important;
-}
-
-/* NAVIGATION BUTTONS */
-/* ALL: */
- >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
-/* ACTIVE */
-#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
-#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
-#s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
-#s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
-/* More slides? Add here more rules */
-
-/* PREV/NEXT CONTAINERS VISIBILITY */
-/* ALL: */
- >s:target ~ .prevNext >* {      visibility: hidden;}
-/* ACTIVE: */
-#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
-#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
-#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
-#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
-/* More slides? Add here more rules */
-
-/* SLIDER ANIMATION POSITIONS */
-
-#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
-#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
-#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
-#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
-/* More slides? Add here more rules */
+		.gallery .gallery-filter .filter-item:hover {
+			-ms-transform: scale(1.5);
+			/* IE 9 */
+			-webkit-transform: scale(1.5);
+			/* Safari 3-8 */
+			transform: scale(1.5);
+			background-color: red;
+		}
 
 
-/* YOU'RE THE DESIGNER! 
-   ____________________
-   All above was mainly to get it working :)
-   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+		.gallery .gallery-item {
+			width: calc(100% / 3);
+			padding: 15px;
+		}
 
-{
-	color: #fff;	
-	text-align: center;
-}
- .slider h2 {
-	margin-top: 40vh;
-	font-weight: 200;
-	letter-spacing: -0.06em;
-	word-spacing: 0.2em;
-	font-size: 3em;
-}
- a {
-	border-radius: 50%;
-	margin: 0 3px;
-	color: rgba(0,0,0,0.8);
-	text-decoration: none;
-}
+		.gallery .gallery-item-inner {
+			width: 100%;
+		}
+
+		.gallery .gallery-item.show {
+			animation: fadeIn 0.5s ease;
+		}
+
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.gallery .gallery-item.hide {
+			display: none;
+		}
+
+		/*responsive*/
+		@media(max-width: 991px) {
+			.gallery .gallery-item {
+				width: 50%;
+			}
+		}
+
+		@media(max-width: 767px) {
+			.gallery .gallery-item {
+				width: 100%;
+			}
+
+			.gallery .gallery-filter .filter-item {
+				margin-bottom: 10px;
+			}
+		}
 	</style>
-</head>
 
 <body>
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light " id="ftco-navbar">
+        <div class="container">
+            <a id='zoom' class="navbar-brand" href="index.html"><img style="height: 50px;width:auto ;"
+                    src="images\circle-cropped (1).png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="menu-icon">
+                    <span class="fas fa-bars"></span> Menu
+                 </div>
+            </button>
 
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar01-light " id="ftco-navbar">
-		<div class="container">
-			<a id='zoom' class="navbar-brand" href="index.html"><img style="height: 50px;width:auto ;"
-					src="images\circle-cropped (1).png"></a>
-			<button class="navbar-toggler" type="button" toggle="collapse" target="#ftco-nav" aria-controls="ftco-nav"
-				aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span> Menu
-			</button>
+            <div class="collapse navbar-collapse " id="ftco-nav">
+                <ul class="navbar-nav  nav justify-content-center ">
+                    <li id='zoom' class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+					<li id='zoom' class="nav-item"><a href="categories.html" class="nav-link">Categories</a></li>
 
-			<div class="collapse navbar-collapse " id="ftco-nav">
-				<ul class="navbar-nav  nav justify-content-center ">
-					<li id='zoom' class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-					<li id='zoom' class="nav-item active"><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li id='zoom' class="nav-item "><a href="#about" class="nav-link">About</a></li>
 
-					<li id='zoom' class="nav-item "><a href="#about" class="nav-link">About</a></li>
-
-
-					<li id='zoom' class="nav-item"><a href="https://www.instagram.com/the.borrowed.store/"
-							class="nav-link">Contact Us</a></li>
-				</ul>
-			</div>
-
-		</div>
-	</nav>
-	<!-- END nav -->
-
-
+                    <li id='zoom' class="nav-item"><a href="https://www.instagram.com/the.borrowed.store/"
+                            class="nav-link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-md-3 pull-right">
+                <div class="d-flex justify-content-center h-100">
+                    <a href="productid.html">
+                        <button class="btn btn-danger center-block  "><i class="fa fa-search"></i> Search Product</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
 	<br>
 
-	<div class="container" id=advert1>
+	<section class="ftco-section bg-light gallery">
+		<div class="container">
+			<div class="row justify-content-center mb-3 pb-3">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h1 class="big">Products</h1>
+					<h2 class="mb-4">Women's Top</h2>
 
 
-		<div class="row">
-			<div class="col-md-12">
-				<div class="CSSgal">
-
-          <!-- Don't wrap targets in parent -->
-          <s id="s1"></s> 
-          <s id="s2"></s>
-          <s id="s3"></s>
-          <s id="s4"></s>
-        
-          <div class="slider">
-            <div style="background:#5b8;">
-              <h2>PURE <b>CSS</b> SLIDESHOW</h2>
-              <p>Responsive Slideshow Gallery created using CSS only<br>by Roko</p>
-            </div>
-            <div style="background:#85b;">
-              <h2>Slide 2</h2>
-            </div>
-            <div style="background:#e95;">
-              <h2>Slide 3</h2>
-            </div>
-            <div style="background:#e59;">
-              <h2>Slide 4</h2>
-            </div>
-          </div>
-          
-          <div class="prevNext">
-            <div><a href="#s4"></a><a href="#s2"></a></div>
-            <div><a href="#s1"></a><a href="#s3"></a></div>
-            <div><a href="#s2"></a><a href="#s4"></a></div>
-            <div><a href="#s3"></a><a href="#s1"></a></div>
-          </div>
-        
-          <div class="bullets">
-            <a href="#s1">1</a>
-            <a href="#s2">2</a>
-            <a href="#s3">3</a>
-            <a href="#s4">4</a>
-          </div>
-        
-        </div>
+				</div>
 			</div>
 		</div>
-	</div>
+		<br>
+		<br>
 
-	<div class="container ">
-		<div class="flex justify-content-center  mar ">
-			<div class="searchbar1" id="search1">
-				<input id="searchinput1" type="text" onkeyup="myFunction()" placeholder="Search..."
-					class="fas fa-search">
+		<div class="container">
+			<div class="row">
+				<div class="gallery-filter">
+					<span class="filter-item active" data-filter="all">all</span>
+					<span class="filter-item" data-filter="700">Rs. 0 - 700</span>
+					<span class="filter-item" data-filter="1000">Rs. 700 - 1000</span>
+					<span class="filter-item" data-filter="1500">Rs. 1000 - 1500</span>
+					<span class="filter-item" data-filter="above">Rs. 1500 Above</span>
+				</div>
+			</div>
 
-				<br>
-
-
-				<form name="searching_tabel" id="searching_tabel">
-					<div class="container" class="flex justify-content-center  mar ">
-						<table class="table table-bordered my_tabel" id="myTable">
-							<style>
-								table {
-									font-family: arial, sans-serif;
-									border-collapse: collapse;
-									width: 100%;
-									color: white;
-								}
-
-								th {
-									background-color: rgba(0, 0, 0, .5);
-									color: black;
-								}
-
-								td,
-								th {
-									border: 2px solid #dddddd;
-									text-align: center;
-									padding: 8px;
-									color: rgb(255, 255, 255);
-								}
+			<div id="shuffle" class="row">
 
 
-								tr {
-									background-color: rgba(0, 0, 0, .5);
-									color: rgb(241, 238, 238);
-								}
-							</style>
-							</head>
+				<div class="gallery-item 700">
+					<div class="gallery-item-inner">
 
-							<body>
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div1">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585746" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01"
+												src="https://assets.ajio.com/medias/sys_master/root/20200729/0Pu7/5f219093f997ddfa532674b9/-1117Wx1400H-441044004-blue-MODEL.jpg"></a>
+									</div>
 
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585746" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01"
+												src="https://assets.ajio.com/medias/sys_master/root/20200729/2Si1/5f219cc0f997ddfa5326ce15/-1117Wx1400H-441044004-blue-MODEL2.jpg"></a>
+									</div>
 
-								<table>
-									<tr>
-										<th>Product ID</th>
-										<th>Website</th>
-										<th>Link</th>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-									<tr>
-										<td colspan="3" style="color: #000;text-decoration: underline;"><a
-												href=LINK>PANT</a></td>
-									</tr>
-
-									<tr>
-										<td>A1234</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://amzn.to/2VLLlPo">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A1235</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://amzn.to/3ACemfw">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A1236</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://amzn.to/3AA3DSZ">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A1237</td>
-										<td>Amazon</td>
-										<td style="color: #000; text-decoration: underline;"><a
-												href="https://amzn.to/3lTOzLS">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A1238</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://amzn.to/2XemIvv">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A1239</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210811s4145883">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12340</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210811s4145896">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12341</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210811s4145937">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12342</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210812s4149481">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12343</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210812s4149491">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12344</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210812s4149909">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12345</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210812s4149937">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12346</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210812s4149967">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12347</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210812s4151139">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12348</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210812s4151154">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12349</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://ekaro.in/enkr20210812s4151178">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>A12350</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/jeans/street-9/street-9-women-blue-flared-mid-rise-slash-knee-stretchable-jeans/12693456/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6001</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/tshirts/mast--harbour/mast--harbour-men-peach-coloured--white-pure-cotton-feather-print-round-neck-t-shirt/13338130/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6002</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/tshirts/mast--harbour/mast--harbour-men-white--blue-printed-pure-cotton-round-neck-t-shirt/13222848/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6003</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/tshirts/roadster/roadster-men-navy-blue--yellow-typography-cotton-printed-t-shirt/13744670/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6004</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/tshirts/nike/nike-men-black--red-printed-as-nsw-worldwide-jdi-sportswear-pure-cotton-t-shirt/14805380/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6005</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/tshirts/roadster/roadster-men-navy-blue--orange-typography-printed-pure-cotton-t-shirt/13745272/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6006</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/tshirts/one8-x-puma/one8-x-puma-men-white-printed-slim-fit-vk-graphic-round-neck-t-shirt/13887166/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6007</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/tshirts/puma/puma-men-black-graphic-20-pure-cotton-printed-t-shirt/13887504/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6008</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/shirts/mast--harbour/mast--harbour-men-blue--white-regular-fit-printed---casual-cotton-linen-sustainable-shirt/11369790/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6009</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/shirts/roadster/roadster-men-burgundy--black-regular-fit-checked-casual-shirt/11327084/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6010</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/shirts/herenow/herenow-men-white--black-regular-fit-checked-casual-shirt/2456286/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6011</td>
-										<td>Myntra</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/shirts/ecko-unltd/ecko-unltd-men-blue-slim-fit-faded-denim-casual-shirt/2284871/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6012</td>
-										<td>Ajio</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.myntra.com/shirts/roadster/roadster-men-blue-regular-fit-solid-denim-shirt/12164202/buy">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6013</td>
-										<td>Ajio</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.ajio.com/netplay-checked-slim-fit-shirt-with-patch-pocket/p/441101351_white">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6014</td>
-										<td>Ajio</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.ajio.com/the-indian-garage-co-printed-slim-fit-shirt/p/460815166_white">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6015</td>
-										<td>Ajio</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.ajio.com/the-indian-garage-co-typographic-print-slim-fit-shirt/p/460815170_white">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6016</td>
-										<td>Ajio</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.ajio.com/john-players-jeans-checked-extra-slim-fit-reversible-casual-shirt/p/420065482_rust">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6017</td>
-										<td>Ajio</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.ajio.com/the-indian-garage-co-graphic-print-slim-fit-shirt/p/460815168_white">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6018</td>
-										<td>Ajio</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.ajio.com/john-players-striped-slim-fit-shirt/p/440967985_indigoblue">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6019</td>
-										<td>Ajio</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.ajio.com/united-colors-of-benetton-striped-slim-fit-shirt-with-spread-collar/p/460436921_grey">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6020</td>
-										<td>Ajio</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.ajio.com/huetrap-leaf-print-crew-neck-t-shirt/p/461093463_white">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6021</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.amazon.in/destiny-digital-printed-stylish-shirts/dp/b0963ywflv/ref=zg_bsnr_1968093031_3?_encoding=utf8&psc=1&refrid=hh91t5fga87rxcmx3s7h">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6022</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.amazon.in/lookmark-cotton-digital-printed-rock-s_small_multicolor/dp/b099686s9r/ref=slsr_d_dpds_fsdpnewarrivals_fa_2/262-5174443-0142837?pd_rd_w=nxpfa&pf_rd_p=fe8716ff-d297-4623-80ec-5a12f60e89ad&pf_rd_r=m9p4p8y1vwzec6anztdc&pd_rd_r=bc6fc0fa-24c3-423a-93fb-bb679ffa384f&pd_rd_wg=dsjnb&pd_rd_i=b099686s9r&psc=1">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6023</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.amazon.in/gift-multicolour-printed-shirts-gs-06/dp/b098bcgzf4/ref=zg_bsnr_1968093031_52?_encoding=utf8&psc=1&refrid=xghehp5dfmzrmj4qkhbk">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6024</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.amazon.in/floral-print-strip-shirt-medium/dp/b095k83hb4/ref=zg_bsnr_1968093031_90?_encoding=utf8&psc=1&refrid=xghehp5dfmzrmj4qkhbk">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6025</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.amazon.in/dream-believe-fashion-regular-full-stitched/dp/b091pxj6v2/ref=pd_di_sccai_12/262-5174443-0142837?pd_rd_w=imdyq&pf_rd_p=fe781afd-b38e-460e-84b3-0b9cfeddda81&pf_rd_r=1a22f3ev4jyat2batz0x&pd_rd_r=8634c184-4949-46fe-b5dd-e0a1c6de6cda&pd_rd_wg=kfsyg&pd_rd_i=b091pxj6v2&psc=1">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6026</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.amazon.in/pause-multicolor-sleeve-t-shirt-pact02191517-multi-s/dp/b07p5f1pvr/ref=pd_rhf_ee_s_pd_crcd_7/262-5174443-0142837?pd_rd_w=bkzpe&pf_rd_p=a62021ef-ed94-4c60-92cc-5878fb8afd3c&pf_rd_r=ap2xwm05cfc7xw292hcp&pd_rd_r=006eac26-220e-41c8-93d4-99fd004711e3&pd_rd_wg=rx7jn&pd_rd_i=b07p43mm7b&psc=1">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6027</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.amazon.in/dp/b08rmzlht3/ref=syn_sd_onsite_desktop_103?psc=1&uh_it=271bbf9c16a96e0af9aa789146eaaf1d_ct&spla=zw5jcnlwdgvkuxvhbglmawvypufooelluuq2wlq1v08mzw5jcnlwdgvkswq9qta0mzq4nzrdqznssddxofnov1kmzw5jcnlwdgvkqwrjzd1bmdexnteznjnmrutdu1poqtjimlkmd2lkz2v0tmftzt1zzf9vbnnpdgvfzgvza3rvcczhy3rpb249y2xpy2tszwrpcmvjdczkb05vdexvz0nsawnrpxrydwu=">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6028</td>
-										<td>Amazon</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.amazon.in/dp/b093ls3djp/ref=sspa_dk_detail_5?psc=1&spla=zw5jcnlwdgvkuxvhbglmawvypuextjncvzfdukxgskhfjmvuy3j5chrlzelkpuewnjc5nziwm0tmotbgn1pftk82wizlbmnyexb0zwrbzelkpuewodqwmjczmje3u1pgouhtoe5sryz3awrnzxroyw1lpxnwx2rldgfpbdimywn0aw9upwnsawnrumvkaxjly3qmzg9ob3rmb2ddbgljaz10cnvl">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6029</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/high-risk-red-black-shirt">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6030</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/mens-casual-check-shacket-men">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6031</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/campus-sutra-men-stylish-casual-shirt-ss21csmssrt257">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6032</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/tusok-men-short-sleeve-cotton-printed-yatch-boat-red-white-shirt">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6033</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/mens-sleevless-hoodie-check-shirts-men">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6034</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/lost-mountains-half-sleeve-t-shirt-for-men">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6035</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/white-blocks-and-fonts-aop-half-sleeve-t-shirt">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6036</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/friends-logo-half-sleeve-t-shirt-for-men">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6037</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/never-mind-stripe-crewneck-varsity-rib-h-s-t-shirt-multicolor">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6038</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/game-changer-white">Click Here</a></td>
-									</tr>
-									<tr>
-										<td>M6039</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.bewakoof.com/p/plain-round-neck-varsity-h-s-t-shirt-men-white-01">Click
-												Here</a></td>
-									</tr>
-									<tr>
-										<td>M6040</td>
-										<td>Bewakoof</td>
-										<td style="color: #000;text-decoration: underline;"><a
-												href="https://www.ajio.com/huetrap-leaf-print-crew-neck-t-shirt/p/461093463_white">Click
-												Here</a></td>
-									</tr>
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585746" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01"
+												src="https://assets.ajio.com/medias/sys_master/root/20200728/kz8f/5f2042c9f997ddfa5324286e/-1117Wx1400H-441044004-blue-MODEL4.jpg"></a>
+									</div>
 
 
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1111</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211006s5585746">ONLY</a></h3>
+											<p> Website - AJIO</p>
 
-								</table>
-						</table>
+											<p class="price"><span>Rs. 680</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				</form>
+				</div>
 
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div2">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585759" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210205/hIA6/601d718caeb26969815efc9e/-1117Wx1400H-460751217-white-MODEL.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585759" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210205/S89p/601d3d6caeb26969815e884c/-1117Wx1400H-460751217-white-MODEL2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585759" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210205/1YgI/601d4a937cdb8c1f14378401/-1117Wx1400H-460751217-white-MODEL3.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1112</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211006s5585759">OUTRYT</a></h3>
+											<p> Website - AJIO</p>
+
+											<p class="price"><span>Rs. 779</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div3">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585761" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210205/5AVv/601d5463aeb26969815ebd1d/-1117Wx1400H-460751229-darkblue-MODEL.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585761" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210205/asCf/601d5afb7cdb8c1f1437b565/-1117Wx1400H-460751229-darkblue-MODEL2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585761" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210205/rYOk/601d4b097cdb8c1f1437852a/-1117Wx1400H-460751229-darkblue-MODEL4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1113</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211006s5585761">OUTRYT</a></h3>
+											<p> Website - AJIO</p>
+
+											<p class="price"><span>Rs. 899</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div4">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585776" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210225/C4l6/603744beaeb26969816fcee1/-1117Wx1400H-460858789-black-MODEL.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585776" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210225/1DSx/60374352aeb26969816fca32/-1117Wx1400H-460858789-black-MODEL2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585776" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210225/pazW/603745a8aeb26969816fd077/-1117Wx1400H-460858789-black-MODEL4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1114</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211006s5585776">TRENDYOL</a></h3>
+											<p> Website - AJIO</p>
+
+											<p class="price"><span>Rs. 920</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div5">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585771" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210223/Tisq/60351d1e7cdb8c1f144a5702/-1117Wx1400H-460858754-black-MODEL.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585771" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210223/F8cF/60351ac17cdb8c1f144a5035/-1117Wx1400H-460858754-black-MODEL2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585771" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210223/L7Cq/60352066f997dd5c40f8ee85/-1117Wx1400H-460858754-black-MODEL3.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1115</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211006s5585771">TRENDYOL</a></h3>
+											<p> Website - AJIO</p>
+
+											<p class="price"><span>Rs. 800</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div6">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585786" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210403/4Uhl/606865767cdb8c1f14750070/-1117Wx1400H-461061256-blue-MODEL3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585786" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210403/5ktK/606865767cdb8c1f14750024/-1117Wx1400H-461061256-blue-MODEL4.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585786" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210403/HPeI/606865857cdb8c1f14750167/-1117Wx1400H-461061256-blue-MODEL5.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1116</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211006s5585786">BERRYLUSH</a></h3>
+											<p> Website - AJIO</p>
+
+											<p class="price"><span>Rs. 797</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div7">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585791" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210421/MbvE/60803ef6aeb269a9e39b3db0/-1117Wx1400H-441111576-blue-MODEL.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585791" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210421/9AKp/60803e7faeb269a9e39b3bfc/-1117Wx1400H-441111576-blue-MODEL2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585791" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210421/5ng9/608041c7f997dd7b64bc5095/-1117Wx1400H-441111576-blue-MODEL4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1117</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211006s5585791">PROJECT EVE</a></h3>
+											<p> Website - AJIO</p>
+
+											<p class="price"><span>Rs. 750</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div8">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585799" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210507/Ro4O/60948c0bf997ddb312954dea/-1117Wx1400H-462395697-blue-MODEL.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585799" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210507/jXuy/60948c0bf997ddb312954e38/-1117Wx1400H-462395697-blue-MODEL2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585799" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210507/g6Jv/60948c0bf997ddb312954e2e/-1117Wx1400H-462395697-blue-MODEL4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1118</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211006s5585799">PLUSS</a></h3>
+											<p> Website - AJIO</p>
+
+											<p class="price"><span>Rs. 752</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div9">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585803" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210622/YM3Y/60d12365aeb269a9e302299e/-1117Wx1400H-462536122-blue-MODEL6.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585803" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210622/mEEg/60d12365aeb269a9e302294a/-1117Wx1400H-462536122-blue-MODEL.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211006s5585803" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.ajio.com/medias/sys_master/root/20210622/eehG/60d12365aeb269a9e302299d/-1117Wx1400H-462536122-blue-MODEL5.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1119</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211006s5585803">RIGO</a></h3>
+											<p> Website - AJIO</p>
+
+											<p class="price"><span>Rs. 960</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+	
+				
+				<div class="gallery-item above">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div10">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258912" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14340818/2021/8/12/6a5cc0e5-da37-46b6-a7b1-40e4f63276fa1628779935808DressesMANGOWomenDressesMANGOWomenTshirtsMANGOWomenTrousersM1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258912" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14340818/2021/8/12/95f69687-636f-435f-8718-bcf067bf3ef01628779935830DressesMANGOWomenDressesMANGOWomenTshirtsMANGOWomenTrousersM2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258912" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14340818/2021/8/12/6009dc9c-b9fb-4838-aa8d-4bbf0c2edcb21628779935856DressesMANGOWomenDressesMANGOWomenTshirtsMANGOWomenTrousersM4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1120</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258912">MANGO</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 1943</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div11">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258917" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13789634/2021/7/27/4f0b3eb5-7279-4034-9653-f089012df4a01627384785474-all-about-you-Women-Skirts-371627384784796-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258917" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13789634/2021/7/27/b990bb94-d00d-43c6-bd2f-1040330e98e01627384785454-all-about-you-Women-Skirts-371627384784796-2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258917" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13789634/2021/7/27/9cfa7825-d051-4ddb-b702-f9d00c937c0d1627384785415-all-about-you-Women-Skirts-371627384784796-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1121</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258917">all about you</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 759</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item above">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div12">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6264394" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/10/17/7941fa21-16b0-4593-b29f-f2130669e16c1602898771286-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6264394" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/10/17/7d667f2e-70ed-44e7-ae02-553b9422e5f01602898771344-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6264394" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/10/17/090256e7-12a8-45b0-8a75-9d66bb12bbca1602898771385-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1122</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6264394">AMERICAN EAGLE OUTFITTERS
+											</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 1749</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div13">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258925" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11930982/2020/7/28/69afc417-8072-4243-b60d-0f937349d8931595937543188-Roadster-Women-Shorts-8741595937541338-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258925" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11930982/2020/7/28/39ebaaa1-3cb1-4dff-99d9-abdbcbdec7441595937543048-Roadster-Women-Shorts-8741595937541338-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258925" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11930982/2020/7/28/cda93be0-554f-40f8-92b8-7e1a183947981595937542964-Roadster-Women-Shorts-8741595937541338-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1123</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258925">Roadster</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 779</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div15">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258931" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14012384/2021/9/14/bd1da05e-3d32-4c64-b138-9b1ee8549fde1631610098101-Mast--Harbour-Women-Shorts-5671631610097458-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258931" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14012384/2021/9/14/72bd0d94-3a98-4466-87c2-d18810c1ee721631610098062-Mast--Harbour-Women-Shorts-5671631610097458-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258931" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14012384/2021/9/14/1058fbee-36eb-4d9b-a58e-d131cb4146951631610098043-Mast--Harbour-Women-Shorts-5671631610097458-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1125</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258931">Mast & Harbour
+											</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 749</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div16">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258934" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11930982/2020/7/28/69afc417-8072-4243-b60d-0f937349d8931595937543188-Roadster-Women-Shorts-8741595937541338-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258934" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11930982/2020/7/28/39ebaaa1-3cb1-4dff-99d9-abdbcbdec7441595937543048-Roadster-Women-Shorts-8741595937541338-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258934" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11930982/2020/7/28/cda93be0-554f-40f8-92b8-7e1a183947981595937542964-Roadster-Women-Shorts-8741595937541338-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1126</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258934">Roadster</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 779</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item above">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div17">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258939" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/10/17/7941fa21-16b0-4593-b29f-f2130669e16c1602898771286-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258939" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/10/17/7d667f2e-70ed-44e7-ae02-553b9422e5f01602898771344-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258939" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/10/17/090256e7-12a8-45b0-8a75-9d66bb12bbca1602898771385-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1127</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258939">AMERICAN EAGLE OUTFITTERS
+											</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 1749</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div18">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258940" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13789634/2021/7/27/4f0b3eb5-7279-4034-9653-f089012df4a01627384785474-all-about-you-Women-Skirts-371627384784796-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258940" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13789634/2021/7/27/76fe69d4-cbef-47b7-83c1-507c80a872871627384785434-all-about-you-Women-Skirts-371627384784796-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258940" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13789634/2021/7/27/9cfa7825-d051-4ddb-b702-f9d00c937c0d1627384785415-all-about-you-Women-Skirts-371627384784796-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1128</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258940">all about you
+											</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 759</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item above">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div19">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258944" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14340818/2021/8/12/6a5cc0e5-da37-46b6-a7b1-40e4f63276fa1628779935808DressesMANGOWomenDressesMANGOWomenTshirtsMANGOWomenTrousersM1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258944" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14340818/2021/8/12/7d3efa03-17d9-4742-a8f1-4b44c3f128511628779935845DressesMANGOWomenDressesMANGOWomenTshirtsMANGOWomenTrousersM3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258944" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14340818/2021/8/12/6009dc9c-b9fb-4838-aa8d-4bbf0c2edcb21628779935856DressesMANGOWomenDressesMANGOWomenTshirtsMANGOWomenTrousersM4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1129</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258944">MANGO</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 1943</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 700">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div20">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258947" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10308581/2019/7/29/ef4113a4-8b02-469e-9d78-c4208223c2c41564380750905-SASSAFRAS-Women-Skirts-9621564380749800-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258947" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10308581/2019/7/29/48e86b05-21a3-4b53-9da9-c6e5d5aec12b1564380750859-SASSAFRAS-Women-Skirts-9621564380749800-4.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258947" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10308581/2019/7/29/ef4113a4-8b02-469e-9d78-c4208223c2c41564380750905-SASSAFRAS-Women-Skirts-9621564380749800-1.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1130</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258947">SASSAFRAS</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 687</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div21">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258951" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/8643283/2019/2/4/b521732e-4431-4f0a-9780-a329b2248d131549264050141-SASSAFRAS-Women-Beige-Printed-A-Line-Skirt--3321549264049513-2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258951" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/8643283/2019/2/4/b01848dc-7109-40e1-b429-ef0350a7e4fe1549264050101-SASSAFRAS-Women-Beige-Printed-A-Line-Skirt--3321549264049513-4.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258951" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/8643283/2019/2/4/861d1f1d-7049-4c80-a31d-e94f857dd2ab1549264050158-SASSAFRAS-Women-Beige-Printed-A-Line-Skirt--3321549264049513-1.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1131</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258951">SASSAFRAS</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 719</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div22">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258956" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11227214/2020/1/8/4d6a32ab-1c19-4fd8-a688-cdc37ee0700e1578462959742-anayna-Women-Black--Beige-Printed-Flared-Maxi-Skirt-26815784-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258956" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11227214/2020/1/8/67094ab9-780d-4482-9dd1-5c0f1a74a81a1578462959642-anayna-Women-Black--Beige-Printed-Flared-Maxi-Skirt-26815784-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258956" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11227214/2020/1/8/88d6f028-57d7-4a16-9421-5de4640cdb261578462959587-anayna-Women-Black--Beige-Printed-Flared-Maxi-Skirt-26815784-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1132</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258956">anayna</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 899</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item above">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div23">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258958" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2021/2/27/03e3b72d-4cd7-4b39-a289-227d9568a5d71614415461729-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258958" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2021/2/27/3191680f-a377-422a-b08a-9d74469f34341614415461774-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258958" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2021/2/27/21edfdf4-b592-47c3-a3b8-6c2f88f9d7b11614415461798-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1133</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258958">FableStreet</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 1606</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 700">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div24">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258961" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/9535341/2019/5/16/75ebed67-4298-4ca5-9ed9-9e04bf1dda231558000157338-Athena-Women-Burgundy-Lace-A-Line-Skirt-7781558000154271-2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258961" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/9535341/2019/5/16/efd1a134-72c0-4996-86ef-9b6fcb765e261558000157289-Athena-Women-Burgundy-Lace-A-Line-Skirt-7781558000154271-4.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258961" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/9535341/2019/5/16/3ef29922-95ec-4f79-b706-b48fbb2b391c1558000157360-Athena-Women-Burgundy-Lace-A-Line-Skirt-7781558000154271-1.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1134</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258961">Athena</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 574</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1500">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div25">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258967" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/7687290/2018/10/29/de94b7c9-e5cd-436a-9b8b-933c3d99d4e21540794994421-SASSAFRAS-Women-Skirts-9051540794994365-4.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258967" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/7687290/2018/10/29/e53ed04f-3e18-4e3f-81d8-2e823551d2fd1540794994452-SASSAFRAS-Women-Skirts-9051540794994365-2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258967" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/7687290/2018/10/29/62cd7a15-020e-4470-9603-1f81337cd07b1540794994465-SASSAFRAS-Women-Skirts-9051540794994365-1.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1135</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258967">SASSAFRAS</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 1099</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div26">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258972" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11489578/2020/7/28/a8fb20fa-cf95-4e22-addd-76057291bc4c1595937294378-Roadster-Women-Skirts-821595937292032-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258972" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11489578/2020/7/28/a4819726-29b8-46e7-bad2-1b20c16850501595937294305-Roadster-Women-Skirts-821595937292032-2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258972" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11489578/2020/7/28/de638cb7-e146-4a8f-8a33-bf0e62c3d2ce1595937294163-Roadster-Women-Skirts-821595937292032-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1136</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258972">Roadster</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 959</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 700">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div27">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258973" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/9404677/2019/5/14/6aecb6aa-2c44-4d67-b79c-618a56d8dda01557825443733-Popnetic-Women-Brown-Solid-Straight-Skirt-6321557825442128-2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258973" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/9404677/2019/5/14/a9ca1a68-968f-4349-82f9-f1539be563cd1557825443691-Popnetic-Women-Brown-Solid-Straight-Skirt-6321557825442128-4.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258973" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/9404677/2019/5/14/8e020cca-a14b-4db9-b1b0-07f6162c4dfa1557825443754-Popnetic-Women-Brown-Solid-Straight-Skirt-6321557825442128-1.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1137</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258973">Popnetic</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 559</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div28">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258975" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/12630278/2020/12/17/488c6af0-e1e6-4e57-a40c-8df9cb949f2e1608193892389-ONLY-Women-Skirts-2941608193889548-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258975" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/12630278/2020/12/17/94a465ca-455a-4c3a-b5b9-68e96dfeae101608193892278-ONLY-Women-Skirts-2941608193889548-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258975" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/12630278/2020/12/17/66edbd91-4b59-47d2-bca3-09fc863f04621608193892236-ONLY-Women-Skirts-2941608193889548-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1138</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258975">ONLY</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 999</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div29">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258979" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13846400/2021/7/17/274aa412-839e-4d7d-baea-e6ec4d1960ef1626505739111-Berrylush-Women-Green--White-Polka-Print-Wrap-Midi-Skirt-624-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258979" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13846400/2021/7/17/7376c5a8-be15-41b9-9fca-43aa177dfb801626505739094-Berrylush-Women-Green--White-Polka-Print-Wrap-Midi-Skirt-624-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258979" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13846400/2021/7/17/20199114-7775-4a93-99a8-9a232bd8e0921626505739083-Berrylush-Women-Green--White-Polka-Print-Wrap-Midi-Skirt-624-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1139</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258979">Berrylush</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 797</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div30">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258981" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2261828/2019/4/24/ab346c92-b611-4d5a-88b7-a122c9f650a11556105460190-Mast--Harbour-Women-Blue-Solid-Regular-Fit-Denim-Shorts-3941-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258981" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2261828/2019/4/24/aa52b12a-17af-4c1b-b49a-4dc9fb5cdc331556105460145-Mast--Harbour-Women-Blue-Solid-Regular-Fit-Denim-Shorts-3941-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258981" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/2261828/2019/4/24/ab346c92-b611-4d5a-88b7-a122c9f650a11556105460190-Mast--Harbour-Women-Blue-Solid-Regular-Fit-Denim-Shorts-3941-1.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1140</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258981">Mast & Harbour</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 899</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 1500">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div31">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258983" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14139186/2021/7/26/7be2364c-6ad1-4d09-a6d4-04f6bf7ddab11627294410974-Moda-Rapido-Women-Shorts-5281627294410176-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258983" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14139186/2021/7/26/a41b58da-57ef-4bce-9a9e-aa387d0e29cd1627294410955-Moda-Rapido-Women-Shorts-5281627294410176-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258983" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14139186/2021/7/26/02f7ea6f-2970-4140-82f1-cf05245a75121627294410946-Moda-Rapido-Women-Shorts-5281627294410176-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1141</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258983">Moda Rapido
+											</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 1319</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div32">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258988" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13509300/2021/9/22/56358606-cf5a-4bf8-a14b-fddf8bcf7dfc1632308458334-all-about-you-Women-Jeans-4451632308457652-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258988" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13509300/2021/9/22/64c0bfad-02bc-4861-b674-9e904aa1f40b1632308458317-all-about-you-Women-Jeans-4451632308457652-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258988" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13509300/2021/9/22/f16b8f8c-8e7c-425c-bae9-e5a781adbc401632308458307-all-about-you-Women-Jeans-4451632308457652-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1142</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258988">all about you
+											</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 899</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 1500">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div33">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258992" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15632888/2021/10/1/4a509e53-e9e6-47d9-9dbb-a88a4e9d7dfc1633091370535URBANICWomenBeigeBrownFloralPrintBoatNeckMaxiDressDressesURB1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258992" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15632888/2021/10/1/9ae50210-4a10-40f9-b3c1-7738ccfd5e8f1633091370556URBANICWomenBeigeBrownFloralPrintBoatNeckMaxiDressDressesURB2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258992" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15632888/2021/10/1/14476f40-4ce2-4098-9961-ed58f21f9ae31633091370683URBANICWomenBeigeBrownFloralPrintBoatNeckMaxiDressDressesURB3.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1143</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258992">URBANIC</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 1112</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 700">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div34">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258993" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13757356/2021/8/10/b6adad76-a66c-4a86-8fd8-441287425def1628578843809-Roadster-Women-Olive-Green-Loose-Fit-Mid-Rise-Denim-Shorts-9-2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258993" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13757356/2021/8/10/5fe3dc6a-d17b-43b5-ad11-b46cdca3f1111628578843772-Roadster-Women-Olive-Green-Loose-Fit-Mid-Rise-Denim-Shorts-9-4.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258993" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13757356/2021/8/10/acd374fe-9d62-445d-8b51-ad4e4b13e8841628578843828-Roadster-Women-Olive-Green-Loose-Fit-Mid-Rise-Denim-Shorts-9-1.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1144</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258993">Roadster</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 549</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 700">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div35">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258995" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11264144/2020/2/20/77f1819b-8aa9-4136-9343-f64514954e0d1582194213666-DressBerry-Women-Black-Solid-Regular-Fit-Denim-Shorts-371582-2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258995" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11264144/2020/2/20/2de23819-153e-4959-bc89-e737b60af8851582194213517-DressBerry-Women-Black-Solid-Regular-Fit-Denim-Shorts-371582-4.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258995" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11264144/2020/2/20/437593e5-ddde-4cef-8d0f-cd416f1685151582194213719-DressBerry-Women-Black-Solid-Regular-Fit-Denim-Shorts-371582-1.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1145</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258995">DressBerry</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 562</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 1000">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div36">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258998" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13756828/2021/9/18/ad2bf484-7fb0-4ddd-b8a2-52a4cf0692921631946911664-Roadster-Women-Shorts-8661631946910907-2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258998" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13756828/2021/9/18/5d9414e6-6c55-416a-8a73-1a9d64dfc7a31631946911652-Roadster-Women-Shorts-8661631946910907-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6258998" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13756828/2021/9/18/5af2b301-5fd8-4c15-8480-8897b6ba55d61631946911642-Roadster-Women-Shorts-8661631946910907-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1146</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6258998">Roadster</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 764</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="gallery-item 700">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div37">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6259001" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14850460/2021/9/2/9aefd498-2945-4639-a9d0-04cae4ba98721630583061548-Roadster-Women-Blue-Denim-Shorts-6011630583060811-1.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6259001" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14850460/2021/9/2/6c21ebd7-1649-42cb-aae4-0ebad9cad34f1630583061531-Roadster-Women-Blue-Denim-Shorts-6011630583060811-3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6259001" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14850460/2021/9/2/7560bc24-ea00-48fc-b5b8-6528eaa651801630583061522-Roadster-Women-Blue-Denim-Shorts-6011630583060811-4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1147</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6259001">Roadster</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 699</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+				<div class="gallery-item 700">
+					<div class="gallery-item-inner">
+
+						<div class="item">
+							<div class="product">
+								<div class="w3-content w3-display-container slider" id="div38">
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6259005" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14006614/2021/5/19/f07977ef-2c8d-4bd9-af5e-c8a49ab4f7551621412477682BibaWomenRedOffWhitePureCottonIkatPrintKurtaKurtasBibaWomenJ2.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6259005" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14006614/2021/5/19/a7f3e37c-da21-4132-aeed-3c28dd1960941621412477723BibaWomenRedOffWhitePureCottonIkatPrintKurtaKurtasBibaWomenJ3.jpg"></a>
+									</div>
+
+									<div class="mySlides">
+										<a href="https://ekaro.in/enkr20211107s6259005" target="_blank" class="img-prod"><img loading="lazy"
+												class="img-fluid01" src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14006614/2021/5/19/972dcc4c-beb4-4ca6-8577-85c1c41d5d551621412477759BibaWomenRedOffWhitePureCottonIkatPrintKurtaKurtasBibaWomenJ4.jpg"></a>
+									</div>
+
+
+									<a class="prev" onclick="plusDivs(this,-1)">&#10094;</a>
+									<a class="nexts" onclick="plusDivs(this,1)">&#10095;</a>
+									<div class="text pt-3 px-3">
+										<h3>
+											<p><b>Product ID - A1148</b> </p>
+											<h3><a href="https://ekaro.in/enkr20211107s6259005">Mast & Harbour
+											</a></h3>
+											<p> Website - MYNTRA</p>
+
+											<p class="price"><span>Rs. 449</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			
+		</div>
+
+	</section>
+
+	<footer class="footer-32892 pb-0">
+		<div class="site-section">
+			<div class="container">
+
+
+				<div class="row">
+
+					<div class="col-md pr-md-5 mb-4 mb-md-0">
+						<h3>About Us</h3>
+						<p class="mb-4">We bring you the curated and most trending clothing in just one place. You can
+							find all the
+							latest styles here without having to go through a lot of online stores and save your time.
+							Just put in the product ID, which is available on our Instagram page, and get your desired
+							products within minutes. We are uploading new products every weekend. We hope you have a
+							great shopping experience with us.</p>
+						<ul class="list-unstyled quick-info mb-4">
+							<li><a class="d-flex align-items-center"><span
+										class="icon mr-3 fa fa-envelope"></span>fashionhousecontact01@gmail.com</a></li>
+							<li><a class="d-flex align-items-center"><span
+										class="icon mr-3 fa fa-map"></span>Bhubaneswar, Odisha, India </a></li>
+						</ul>
+
+
+					</div>
+					<div class="col-md mb-4 mb-md-0">
+						<h3>Latest Tweet</h3>
+						<ul class="list-unstyled tweets">
+							<li class="d-flex">
+								<div class="mr-4"><span class="fa fa-twitter"></span></div>
+								<div>"Fashion is not something that exists in dresses only. Fashion is in the sky, in
+									the street. Fashion has to do with ideas, the way we live, what is happening." —
+									Coco Chanel</div>
+							</li>
+							<li class="d-flex">
+								<div class="mr-4"><span class="fa fa-twitter"></span></div>
+								<div>"Don't be into trends. Don't make fashion own you, but you decide what you are,
+									what you want to express by the way you dress and the way to live." — Gianni Versace
+								</div>
+							</li>
+							<li class="d-flex">
+								<div class="mr-4"><span class="fa fa-twitter"></span></div>
+								<div> “Fashion is what you’re offered four times a year by designers. And style is what
+									you choose.” – Lauren Hutton</div>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="col-md-3 mb-4 mb-md-0">
+						<h3>Instagram</h3>
+						<div class="row gallery">
+							<div class="col-6">
+								<a href="https://www.instagram.com/the.borrowed.store/"><img
+										src="images\236523954_533264077912084_1707348559461024305_n.jpg" alt="Image"
+										class="img-fluid"></a>
+								<a href="https://www.instagram.com/the.borrowed.store/"><img
+										src="images\236536735_199172315588351_8156604531432809939_n.jpg" alt="Image"
+										class="img-fluid"></a>
+							</div>
+							<div class="col-6">
+								<a href="https://www.instagram.com/the.borrowed.store/"><img
+										src="images\237285794_2385538441578342_7289466931345785742_n.jpg" alt="Image"
+										class="img-fluid"></a>
+								<a href="https://www.instagram.com/the.borrowed.store/"><img
+										src="images\236826225_4818778681484478_1819990712179969571_n.jpg" alt="Image"
+										class="img-fluid"></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12">
+						<hr>
+
+						<div class="site-logo-wrap ml-auto">
+							<a href="#" class="site-logo">
+								Fashion House
+							</a>
+						</div>
+					</div>
+				</div>
 
 			</div>
 		</div>
-	</div>
-	</div>
-
-
-
-
+		</div>
+	</footer>
 
 
 
@@ -892,30 +1733,166 @@ http://stackoverflow.com/a/34696029/383904
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/jquery-latest.min.js"></script>
-
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/popper.min.js"></script>
 
 	<script>
-		function myFunction() {
-			let tabel, filter, input, tr, td, i;
-			input = document.getElementById("searchinput1");
-			filter = input.value.toUpperCase();
-			tabel = document.getElementById("myTable");
-			tr = document.getElementsByTagName("tr");
+		$(document).ready(function () {
 
-			for (i = 0; i < tr.length; i++) {
-				td = tr[i].getElementsByTagName("td")[0];
-				if (td) {
-					if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-						tr[i].style.display = "";
-					} else {
-						tr[i].style.display = "none";
-					}
+			var quantitiy = 0;
+			$('.quantity-right-plus').click(function (e) {
+
+				// Stop acting like a button
+				e.preventDefault();
+				// Get the field name
+				var quantity = parseInt($('#quantity').val());
+
+				// If is not undefined
+
+				$('#quantity').val(quantity + 1);
+
+
+				// Increment
+
+			});
+
+			$('.quantity-left-minus').click(function (e) {
+				// Stop acting like a button
+				e.preventDefault();
+				// Get the field name
+				var quantity = parseInt($('#quantity').val());
+
+				// If is not undefined
+
+				// Increment
+				if (quantity > 0) {
+					$('#quantity').val(quantity - 1);
 				}
+			});
+
+		});
+	</script>
+	<script>
+		var sliderObjects = [];
+		createSliderObjects();
+
+		function plusDivs(obj, n) {
+			var parentDiv = $(obj).parent();
+			var matchedDiv;
+			$.each(sliderObjects, function (i, item) {
+				if ($(parentDiv[0]).attr('id') == $(item).attr('id')) {
+					matchedDiv = item;
+					return false;
+				}
+			});
+			matchedDiv.slideIndex = matchedDiv.slideIndex + n;
+			showDivs(matchedDiv, matchedDiv.slideIndex);
+		}
+
+		function createSliderObjects() {
+			var sliderDivs = $('.slider');
+			$.each(sliderDivs, function (i, item) {
+				var obj = {};
+				obj.id = $(item).attr('id');
+				obj.divContent = item;
+				obj.slideIndex = 1;
+				obj.slideContents = $(item).find('.mySlides');
+				showDivs(obj, 1);
+				sliderObjects.push(obj);
+			});
+		}
+
+		function showDivs(divObject, n) {
+
+			var i;
+			if (n > divObject.slideContents.length) {
+				divObject.slideIndex = 1
 			}
+			if (n < 1) {
+				divObject.slideIndex = divObject.slideContents.length
+			}
+			for (i = 0; i < divObject.slideContents.length; i++) {
+				divObject.slideContents[i].style.display = "none";
+			}
+			divObject.slideContents[divObject.slideIndex - 1].style.display = "block";
 		}
 	</script>
 
->>>>>>> parent of 7ffff63 (navbar update)
+	<script>
+		$(document).ready(function () {
+			$('.dropdown-submenu a.test').on("click", function (e) {
+				$(this).next('ul').toggle();
+				e.stopPropagation();
+				e.preventDefault();
+			});
+		});
+	</script>
+
+
+	<script>
+		const imgs = document.querySelectorAll('[loading="lazy"src]');
+		imgs.forEach(img => {
+			observer.observe(img);
+		});
+	</script>
+	<script>
+		const images = document.querySelectorAll("img");
+
+		const imgOptions = {};
+		const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) return;
+
+				const img = entry.target;
+				img.src = img.src.replace("w=10&", "w=800&");
+				imgObserver.unobserve(entry.target);
+			});
+		}, imgOptions);
+
+		images.forEach((img) => {
+			imgObserver.observe(img);
+		});
+
+	</script>
+
+	
+	<script>$(function () {
+			var parent = $("#shuffle");
+			var divs = parent.children();
+			while (divs.length) {
+				parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+			}
+		});</script>
+
+
+	<script>
+
+
+		const filterContainer = document.querySelector(".gallery-filter"),
+			galleryItems = document.querySelectorAll(".gallery-item");
+
+		filterContainer.addEventListener("click", (event) => {
+			if (event.target.classList.contains("filter-item")) {
+				// deactivate existing active 'filter-item'
+				filterContainer.querySelector(".active").classList.remove("active");
+				// activate new 'filter-item'
+				event.target.classList.add("active");
+				const filterValue = event.target.getAttribute("data-filter");
+				galleryItems.forEach((item) => {
+					if (item.classList.contains(filterValue) || filterValue === 'all') {
+						item.classList.remove("hide");
+						item.classList.add("show");
+					}
+					else {
+						item.classList.remove("show");
+						item.classList.add("hide");
+					}
+				});
+			}
+		});
+
+	</script>
+
 </body>
+
 </html>

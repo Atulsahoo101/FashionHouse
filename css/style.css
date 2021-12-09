@@ -44,6 +44,25 @@ and (max-width : 320px) {
        
         }
 }
+
+@media screen and (max-width: 600px) {
+    #searching {
+        margin-top: 1px;
+    }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
+  {
+    #adverting {
+        margin-top: 1px;
+    }
+}
+@media only screen   
+and (min-device-width : 1224px)   
+  {
+    #advert1 {
+        margin-top: 11px;
+    }
+}
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11516,25 +11535,6 @@ button:focus, button:hover {
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
-.share {
-    cursor: pointer;
-    position: absolute;
-    top: 8%;
-    width: auto;
-    padding: 16px;
-    padding-top: 70px;
-    padding-left: 250px;
-    padding-bottom: 150px;
-    margin-top: -22px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-
 
 .prevs {
     cursor: pointer;
