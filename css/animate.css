@@ -4,7 +4,8 @@
 
 #trending-images {height: 400px;
 }
-
+#advertisement-images {height: 150px;
+}
 .search_input11 {
 	background-image: url(search_icon.png);
 	background-position: 3px 9px;
@@ -48,7 +49,7 @@ thead
 
 .searchbar1{
   margin-bottom: auto;
-  margin-top: 120px;
+ 
   height: 60px;
   border-radius: 30px;
   padding: 10px;
@@ -78,12 +79,7 @@ thead
   transition: width 0.4s linear;
   }
 
- #searchinput1{
-  padding: 0 10px;
-  width: 450px;
-  caret-color:black;
  
-  }
 
   .search_icon1{
   background: black;
@@ -134,15 +130,7 @@ thead
   background-color: #eee;
 }
 
-.item9  {
-    
-  display: none;
-}
 
-.item8 {
-    
-  display: none;
-}
 .searchbar{
   margin-bottom: auto;
   margin-top: auto;

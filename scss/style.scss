@@ -513,11 +513,11 @@ h1, h2, h3, h4, h5,
 		}
 	}
 	
-	.owl-nav {
+	.{
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		.owl-prev,
+		,
 		.owl-next {
 			position: absolute;
 			transform: translateY(-50%);
@@ -539,7 +539,7 @@ h1, h2, h3, h4, h5,
 				}
 			}
 		}
-		.owl-prev {
+		 {
 			right: 0;
 			margin-right: 20px;
 
@@ -548,10 +548,10 @@ h1, h2, h3, h4, h5,
 			right: 0;
 		}
 	}
-	.owl-dots {
+	. {
 		text-align: left;
 		margin-top: 10px;
-		.owl-dot {
+		 {
 			width: 10px;
 			height: 10px;
 			margin: 5px;
@@ -1123,11 +1123,11 @@ h1, h2, h3, h4, h5,
 		}
 	}
 	
-	.owl-nav {
+	.{
 		position: absolute;
 		top: 50%;
 		width: 100%;
-		.owl-prev,
+		,
 		.owl-next {
 			position: absolute;
 			transform: translateY(-50%);
@@ -1141,16 +1141,16 @@ h1, h2, h3, h4, h5,
 			}
 			opacity: 0;
 		}
-		.owl-prev {
+		 {
 			left: 0;
 		}
 		.owl-next {
 			right: 0;
 		}
 	}
-	.owl-dots {
+	. {
 		text-align: center;
-		.owl-dot {
+		 {
 			width: 10px;
 			height: 10px;
 			margin: 5px;
@@ -1179,11 +1179,11 @@ h1, h2, h3, h4, h5,
 	}
 	&:hover{
 		.owl-nav{
-			.owl-prev,
+			,
 			.owl-next{
 				opacity: 1;
 			}
-			.owl-prev {
+			 {
 				left: -25px;
 			}
 			.owl-next {
@@ -1288,7 +1288,7 @@ h1, h2, h3, h4, h5,
 
 //PRODUCT
 .ftco-product{
-	.owl-carousel .owl-stage-outer{
+	.owl-carousel {
 		padding-bottom: 2em;
 		position: relative;
 	}
@@ -2078,16 +2078,16 @@ textarea.form-control {
 	.owl-carousel{
 		margin: 0;
 	}
-	.owl-carousel .owl-stage-outer{
+	.owl-carousel {
 		padding-top: 3.5em;
 		padding-bottom: 2em;
 		position: relative;
 	}
-	.owl-nav {
+	.{
 		position: absolute;
 		top: 100%;
 		width: 100%;
-		.owl-prev,
+		,
 		.owl-next {
 			position: absolute;
 			transform: translateY(-50%);
@@ -2110,7 +2110,7 @@ textarea.form-control {
 			}
 			opacity: 0;
 		}
-		.owl-prev {
+		 {
 			left: 50%;
 			margin-left: -80px;
 		}
@@ -2121,11 +2121,11 @@ textarea.form-control {
 	}
 	&:hover{
 		.owl-nav{
-			.owl-prev,
+			,
 			.owl-next{
 				opacity: 1;
 			}
-			.owl-prev {
+			 {
 				left: 50%;
 				margin-left: -80px;
 			}
@@ -2135,9 +2135,9 @@ textarea.form-control {
 			}
 		}
 	}
-	.owl-dots {
+	. {
 		text-align: center;
-		.owl-dot {
+		 {
 			width: 10px;
 			height: 10px;
 			margin: 5px;
